@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="http-module" />
+        <module name="controllers" />
+        <module name="utilities-module" />
+        <module name="app-module" />
+        <module name="stocks-module" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="app-module" target="8" />
+      <module name="controllers" target="8" />
+      <module name="controllers-module" target="8" />
+      <module name="http-module" target="8" />
+      <module name="stocks-module" target="8" />
+      <module name="trading" target="17" />
+      <module name="utilities-module" target="8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="app-module" options="-parameters" />
+      <module name="controllers" options="-parameters" />
+      <module name="controllers-module" options="-parameters" />
+      <module name="http-module" options="-parameters" />
+      <module name="stocks-module" options="-parameters" />
+      <module name="trading" options="-parameters" />
+      <module name="utilities-module" options="-parameters" />
+    </option>
+  </component>
+</project>

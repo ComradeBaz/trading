@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/app-module/app-module.iml" filepath="$PROJECT_DIR$/app-module/app-module.iml" />
+      <module fileurl="file://$PROJECT_DIR$/controllers-module/controllers.iml" filepath="$PROJECT_DIR$/controllers-module/controllers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/http-module/http-module.iml" filepath="$PROJECT_DIR$/http-module/http-module.iml" />
+      <module fileurl="file://$PROJECT_DIR$/stocks-module/stocks-module.iml" filepath="$PROJECT_DIR$/stocks-module/stocks-module.iml" />
+      <module fileurl="file://$PROJECT_DIR$/trading.iml" filepath="$PROJECT_DIR$/trading.iml" />
+      <module fileurl="file://$PROJECT_DIR$/utilities-module/utilities-module.iml" filepath="$PROJECT_DIR$/utilities-module/utilities-module.iml" />
+    </modules>
+  </component>
+</project>
