@@ -19,6 +19,7 @@
     <orderEntry type="module" module-name="utilities-module" />
     <orderEntry type="module" module-name="stocks-module" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.13.5" level="project" />
+    <orderEntry type="module" module-name="time-series-module" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter:2.7.9" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot:2.7.9" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-context:5.3.25" level="project" />

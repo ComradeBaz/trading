@@ -9,8 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>controllers-module</artifactId>
-    <packaging>jar</packaging>
+    <artifactId>time-series-module</artifactId>
     <dependencies>
         <dependency>
             <groupId>com.domrade</groupId>
@@ -21,17 +20,6 @@
         <dependency>
             <groupId>com.domrade</groupId>
             <artifactId>utilities-module</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>com.domrade</groupId>
-            <artifactId>stocks-module</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.domrade</groupId>
-            <artifactId>time-series-module</artifactId>
             <version>0.0.1-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>

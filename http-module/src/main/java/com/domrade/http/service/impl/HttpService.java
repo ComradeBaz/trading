@@ -54,6 +54,8 @@ public class HttpService implements IHttpService {
         // create headers
         HttpHeaders headers = new HttpHeaders();
         headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
+        headers.set("X-RapidAPI-Key", "89da6c5de9mshe7b8421891b895cp123648jsna1100dafdae2");
+        headers.set("X-RapidAPI-Host", "twelve-data1.p.rapidapi.com");
         return new HttpEntity(headers);
     }
 }

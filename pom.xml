@@ -9,7 +9,8 @@
 		<module>controllers-module</module>
 		<module>http-module</module>
 		<module>utilities-module</module>
-	</modules>
+        <module>time-series-module</module>
+    </modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>

@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="http-module" />
         <module name="controllers" />
+        <module name="time-series-module" />
         <module name="utilities-module" />
         <module name="app-module" />
         <module name="stocks-module" />
@@ -20,6 +21,7 @@
       <module name="controllers-module" target="8" />
       <module name="http-module" target="8" />
       <module name="stocks-module" target="8" />
+      <module name="time-series-module" target="8" />
       <module name="trading" target="17" />
       <module name="utilities-module" target="8" />
     </bytecodeTargetLevel>
@@ -31,6 +33,7 @@
       <module name="controllers-module" options="-parameters" />
       <module name="http-module" options="-parameters" />
       <module name="stocks-module" options="-parameters" />
+      <module name="time-series-module" options="-parameters" />
       <module name="trading" options="-parameters" />
       <module name="utilities-module" options="-parameters" />
     </option>
