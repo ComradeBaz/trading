@@ -1,19 +1,14 @@
 package com.domrade.controllers;
 
-import com.domrade.http.service.api.IHttpService;
 import com.domrade.stocks.models.StockItem;
 import com.domrade.stocks.service.api.IListStockService;
-import com.domrade.utilities.service.api.IJsonConverterService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @CrossOrigin
