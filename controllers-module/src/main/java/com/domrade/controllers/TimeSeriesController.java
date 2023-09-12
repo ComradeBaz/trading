@@ -1,6 +1,7 @@
 package com.domrade.controllers;
 
 import com.domrade.timeseries.models.TimeSeriesResponse;
+import com.domrade.timeseries.models.TimeSeriesResponseParsed;
 import com.domrade.timeseries.service.api.ITimeSeriesService;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +23,8 @@ public class TimeSeriesController {
                                                          @RequestParam(value = "interval", defaultValue = "1day") String interval,
                                                          @RequestParam(value = "outputsize", defaultValue = "30") String outputsize) {
         TimeSeriesResponse response = timeseriesService.getTimeSeriesResponseBySymbol(symbol, interval, outputsize);
+        TimeSeriesResponseParsed responseParsed = new TimeSeriesResponseParsed(response.getMeta(), response.getValues());
 
-        return new ResponseEntity(response, HttpStatus.OK);
+        return new ResponseEntity(responseParsed, HttpStatus.OK);
     }
 }

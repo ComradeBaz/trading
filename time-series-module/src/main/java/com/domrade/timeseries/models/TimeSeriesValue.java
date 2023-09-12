@@ -5,6 +5,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.Date;
+
 @Getter
 @Setter
 @NoArgsConstructor
@@ -12,10 +14,10 @@ import lombok.Setter;
 public class TimeSeriesValue {
 
     private String datetime;
-    private String open;
-    private String high;
-    private String low;
-    private String close;
+    private Double open;
+    private Double high;
+    private Double low;
+    private Double close;
     private String volume;
 }
 
