@@ -29,11 +29,14 @@ public class TimeSeriesService implements ITimeSeriesService {
     }
 
     @Override
-    public TimeSeriesResponse getTimeSeriesResponseBySymbol(String symbol) {
+    public TimeSeriesResponse getTimeSeriesResponseBySymbol(String symbol, String interval, String outputsize) {
         String url = baseUrlTimeseries
                 + "?symbol="
                 + symbol
-                + "&interval=1min";
+                + "&interval="
+                + interval
+                + "&outputsize="
+                + outputsize;
         String response = httpService.makeConnectionAndGetResponse(url, HttpMethod.GET);
         List<TimeSeriesMetaData> metaDataList = jsonConverterService.parseJson(response, TimeSeriesMetaData.class, "meta");
         TimeSeriesMetaData metaData = metaDataList.get(0);

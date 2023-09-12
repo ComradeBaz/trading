@@ -4,5 +4,5 @@ import com.domrade.timeseries.models.TimeSeriesResponse;
 
 public interface ITimeSeriesService {
 
-    public TimeSeriesResponse getTimeSeriesResponseBySymbol(String symbol);
+    public TimeSeriesResponse getTimeSeriesResponseBySymbol(String symbol, String interval, String outputsize);
 }

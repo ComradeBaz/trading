@@ -18,8 +18,10 @@ public class TimeSeriesController {
     private ITimeSeriesService timeseriesService;
 
     @GetMapping(value = "listTimeseriesBySymbol")
-    public ResponseEntity<String> listTimeseriesBySymbol(@RequestParam("symbol") String symbol) {
-        TimeSeriesResponse response = timeseriesService.getTimeSeriesResponseBySymbol(symbol);
+    public ResponseEntity<String> listTimeseriesBySymbol(@RequestParam("symbol") String symbol,
+                                                         @RequestParam(value = "interval", defaultValue = "1day") String interval,
+                                                         @RequestParam(value = "outputsize", defaultValue = "30") String outputsize) {
+        TimeSeriesResponse response = timeseriesService.getTimeSeriesResponseBySymbol(symbol, interval, outputsize);
 
         return new ResponseEntity(response, HttpStatus.OK);
     }
