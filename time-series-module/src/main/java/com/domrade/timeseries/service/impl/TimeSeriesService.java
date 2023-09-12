@@ -16,18 +16,24 @@ import java.util.List;
 @Service
 public class TimeSeriesService implements ITimeSeriesService {
 
-    @Autowired
     private IHttpService httpService;
-
-    @Autowired
     private IJsonConverterService jsonConverterService;
 
     @Value("${base.url.timeseries}")
     private String baseUrlTimeseries;
 
+    @Autowired
+    public TimeSeriesService(IHttpService httpService, IJsonConverterService jsonConverterService) {
+        this.httpService = httpService;
+        this.jsonConverterService = jsonConverterService;
+    }
+
     @Override
     public TimeSeriesResponse getTimeSeriesResponseBySymbol(String symbol) {
-        String url = baseUrlTimeseries + "?symbol=" + symbol + "&interval=1min";
+        String url = baseUrlTimeseries
+                + "?symbol="
+                + symbol
+                + "&interval=1min";
         String response = httpService.makeConnectionAndGetResponse(url, HttpMethod.GET);
         List<TimeSeriesMetaData> metaDataList = jsonConverterService.parseJson(response, TimeSeriesMetaData.class, "meta");
         TimeSeriesMetaData metaData = metaDataList.get(0);

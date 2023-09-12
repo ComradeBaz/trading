@@ -2,6 +2,7 @@ package com.domrade.controllers;
 
 import com.domrade.http.service.api.IHttpService;
 import com.domrade.stocks.models.StockItem;
+import com.domrade.stocks.service.api.IListStockService;
 import com.domrade.utilities.service.api.IJsonConverterService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import lombok.NoArgsConstructor;
@@ -21,54 +22,37 @@ import java.util.List;
 @RequestMapping("/rest/v1/stocks/")
 public class StocksController {
 
-    private final String API = "stocks";
-
-    @Value("${base.url.stocks}")
-    private String baseUrlStocks;
-
     @Autowired
-    private IHttpService httpService;
-
-    @Autowired
-    private IJsonConverterService jsonConverterService;
+    private IListStockService listStockService;
 
     @GetMapping(value = "/listStocks")
     public ResponseEntity<String> listStocks() {
-        String response = httpService.makeConnectionAndGetResponse(baseUrlStocks + API, HttpMethod.GET);
-        List<StockItem> returnList = new ArrayList<>();
-        returnList = jsonConverterService.parseJson(response, StockItem.class, "data");
+        List<StockItem> returnList = listStockService.listStocks();
         return new ResponseEntity(returnList, HttpStatus.OK);
     }
 
     @GetMapping(value = "/listStocksBySymbol")
     public ResponseEntity<String> listStocksBySymbol(@RequestParam(name="symbol") String symbol) {
-        String response = httpService.makeConnectionAndGetResponse(baseUrlStocks + API + "?symbol=" + symbol, HttpMethod.GET);
-        List<StockItem> returnList = new ArrayList<>();
-        returnList = jsonConverterService.parseJson(response, StockItem.class, "data");
+        List<StockItem> returnList = listStockService.listStocksBySymbol(symbol);
         return new ResponseEntity(returnList, HttpStatus.OK);
     }
 
     @GetMapping(value = "/listStocksByExchange")
     public ResponseEntity<String> listStocksByExchange(@RequestParam(name="exchange") String exchange) {
-        String response = httpService.makeConnectionAndGetResponse(baseUrlStocks + API + "?exchange=" + exchange, HttpMethod.GET);
-        List<StockItem> returnList = new ArrayList<>();
-        returnList = jsonConverterService.parseJson(response, StockItem.class, "data");
+        List<StockItem> returnList = listStockService.listStocksByExchange(exchange);
         return new ResponseEntity(returnList, HttpStatus.OK);
     }
 
     @GetMapping(value = "/listStocksByCountry")
     public ResponseEntity<String> listStocksByCountry(@RequestParam(name="country") String country) {
-        String response = httpService.makeConnectionAndGetResponse(baseUrlStocks + API + "?country=" + country, HttpMethod.GET);
-        List<StockItem> returnList = new ArrayList<>();
-        returnList = jsonConverterService.parseJson(response, StockItem.class, "data");
+        List<StockItem> returnList = listStockService.listStocksByCountry(country);
         return new ResponseEntity(returnList, HttpStatus.OK);
     }
 
     @GetMapping(value = "/listStocksBySymbolExchangeCountry")
     public ResponseEntity<String> listStocksBySymbolExchangeCountry(
             @RequestParam(name="symbol") String symbol, @RequestParam(name="exchange") String exchange, @RequestParam(name="country") String country) throws JsonProcessingException {
-        String response = httpService.makeConnectionAndGetResponse(baseUrlStocks + API + "?symbol=" + symbol + "&exchange=" + exchange + "&country=" + country, HttpMethod.GET);
-        List<StockItem> returnList = jsonConverterService.parseJson(response, StockItem.class, "data");
+        List<StockItem> returnList = listStockService.listStocksBySymbolExchangeCountry(symbol, exchange, country);
         return new ResponseEntity(returnList.get(0), HttpStatus.OK);
     }
 }

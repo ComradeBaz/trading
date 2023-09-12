@@ -12,6 +12,11 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.13.5" level="project" />
+    <orderEntry type="module" module-name="http-module" />
+    <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpclient:4.5.14" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpcore:4.4.16" level="project" />
+    <orderEntry type="library" name="Maven: commons-codec:commons-codec:1.15" level="project" />
+    <orderEntry type="module" module-name="utilities-module" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter:2.7.9" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot:2.7.9" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-context:5.3.25" level="project" />
