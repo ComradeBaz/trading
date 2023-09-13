@@ -39,6 +39,7 @@ public class TimeSeriesService implements ITimeSeriesService {
                 + outputsize;
         String response = httpService.makeConnectionAndGetResponse(url, HttpMethod.GET);
         List<TimeSeriesMetaData> metaDataList = jsonConverterService.parseJson(response, TimeSeriesMetaData.class, "meta");
+        // There is one meta node
         TimeSeriesMetaData metaData = metaDataList.get(0);
         List<TimeSeriesValue> timeSeriesValuesList = jsonConverterService.parseJson(response, TimeSeriesValue.class, "values");
 

@@ -23,6 +23,7 @@ public class TimeSeriesController {
                                                          @RequestParam(value = "interval", defaultValue = "1day") String interval,
                                                          @RequestParam(value = "outputsize", defaultValue = "30") String outputsize) {
         TimeSeriesResponse response = timeseriesService.getTimeSeriesResponseBySymbol(symbol, interval, outputsize);
+        // Parse the data into arrays of open/close/low/high values
         TimeSeriesResponseParsed responseParsed = new TimeSeriesResponseParsed(response.getMeta(), response.getValues());
 
         return new ResponseEntity(responseParsed, HttpStatus.OK);

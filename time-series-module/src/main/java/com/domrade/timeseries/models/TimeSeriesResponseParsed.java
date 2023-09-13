@@ -40,8 +40,7 @@ public class TimeSeriesResponseParsed {
             valuesHashMap = this.values.stream()
                     .collect(Collectors.toMap(v -> {
                         try {
-                            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss",
-                                    Locale.ENGLISH);
+                            SimpleDateFormat sdf = getDateFormatter(this.meta.getInterval());
                             Date myDate = sdf.parse(v.getDatetime());
                             return myDate;
                         } catch (ParseException e) {
@@ -61,6 +60,8 @@ public class TimeSeriesResponseParsed {
                     }));
         }
         switch (type) {
+            // Add the values to a TreeMap to apply sorting based on the key
+            // which is a date
             case "low":
                 lowValuesMap = new TreeMap<>(valuesHashMap);
                 break;
@@ -72,6 +73,30 @@ public class TimeSeriesResponseParsed {
                 break;
             default:
                 highValuesMap = new TreeMap<>(valuesHashMap);
+        }
+    }
+
+    private SimpleDateFormat getDateFormatter(String interval) {
+        String patternOneMinuteInterval = "yyyy-MM-dd HH:mm:ss";
+        String patternOndDayInterval = "yyyy-MM-dd";
+
+        switch (interval) {
+            case ("1day"):
+            case ("1week"):
+            case ("1month"):
+                return new SimpleDateFormat(patternOndDayInterval,
+                        Locale.ENGLISH);
+            case ("1min"):
+            case("5min"):
+            case("15min"):
+            case("30min"):
+            case("45min"):
+            case("1h"):
+            case("2h"):
+            case("4h"):
+            default:
+                return new SimpleDateFormat(patternOneMinuteInterval,
+                        Locale.ENGLISH);
         }
     }
 }
