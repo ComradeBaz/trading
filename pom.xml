@@ -5,7 +5,7 @@
 	<packaging>pom</packaging>
 	<modules>
 		<module>app-module</module>
-		<module>stocks-module</module>
+		<module>stocks-list-module</module>
 		<module>controllers-module</module>
 		<module>http-module</module>
 		<module>utilities-module</module>
