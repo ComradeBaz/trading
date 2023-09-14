@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/stocks-module/stocks-module.iml" filepath="$PROJECT_DIR$/stocks-module/stocks-module.iml" />
       <module fileurl="file://$PROJECT_DIR$/time-series-module/time-series-module.iml" filepath="$PROJECT_DIR$/time-series-module/time-series-module.iml" />
       <module fileurl="file://$PROJECT_DIR$/trading.iml" filepath="$PROJECT_DIR$/trading.iml" />
+      <module fileurl="file://$PROJECT_DIR$/user-module/user-module.iml" filepath="$PROJECT_DIR$/user-module/user-module.iml" />
       <module fileurl="file://$PROJECT_DIR$/utilities-module/utilities-module.iml" filepath="$PROJECT_DIR$/utilities-module/utilities-module.iml" />
     </modules>
   </component>

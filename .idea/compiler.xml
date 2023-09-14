@@ -7,11 +7,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="http-module" />
-        <module name="controllers" />
         <module name="time-series-module" />
         <module name="utilities-module" />
+        <module name="user-module" />
         <module name="app-module" />
+        <module name="http-module" />
+        <module name="controllers" />
         <module name="stocks-module" />
       </profile>
     </annotationProcessing>
@@ -23,6 +24,7 @@
       <module name="stocks-module" target="8" />
       <module name="time-series-module" target="8" />
       <module name="trading" target="17" />
+      <module name="user-module" target="8" />
       <module name="utilities-module" target="8" />
     </bytecodeTargetLevel>
   </component>
@@ -35,6 +37,7 @@
       <module name="stocks-module" options="-parameters" />
       <module name="time-series-module" options="-parameters" />
       <module name="trading" options="-parameters" />
+      <module name="user-module" options="-parameters" />
       <module name="utilities-module" options="-parameters" />
     </option>
   </component>
