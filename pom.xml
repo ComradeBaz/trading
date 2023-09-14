@@ -11,6 +11,8 @@
 		<module>utilities-module</module>
         <module>time-series-module</module>
 		<module>user-module</module>
+        <module>deposit-module</module>
+		<module>withdrawal-module</module>
 	</modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
