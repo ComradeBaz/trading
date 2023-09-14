@@ -6,6 +6,10 @@ import com.domrade.deposit.service.api.IDepositService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.persistence.EntityNotFoundException;
+import java.util.ArrayList;
+import java.util.List;
+
 @Service
 public class DepositService implements IDepositService {
 
@@ -19,5 +23,12 @@ public class DepositService implements IDepositService {
     @Override
     public Deposit saveDeposit(Deposit deposit) {
         return depositRepository.save(deposit);
+    }
+
+    @Override
+    public List<Deposit> getDepositsByUserId(Long userId) {
+        List<Deposit> returnList = new ArrayList<>();
+        return depositRepository.getDepositsByUserId(userId)
+                .orElseThrow(() -> new EntityNotFoundException());
     }
 }

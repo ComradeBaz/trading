@@ -26,4 +26,9 @@ public class WithdrawalController {
     public ResponseEntity<Deposit> addUser(@RequestBody Withdrawal withdrawal) {
         return new ResponseEntity(withdrawalService.saveWithdrawal(withdrawal), HttpStatus.CREATED);
     }
+
+    @GetMapping(value = "getWithdrawalsByUserId")
+    public ResponseEntity<Withdrawal> getWithdrawalsByUserId(@RequestParam(name = "userId") Long userId) {
+        return new ResponseEntity(withdrawalService.getWithdrawalsByUserId(userId), HttpStatus.OK);
+    }
 }

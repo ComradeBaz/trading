@@ -3,10 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app-module/app-module.iml" filepath="$PROJECT_DIR$/app-module/app-module.iml" />
-      <module fileurl="file://$PROJECT_DIR$/controllers-module/controllers.iml" filepath="$PROJECT_DIR$/controllers-module/controllers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/controllers-module/controllers-module.iml" filepath="$PROJECT_DIR$/controllers-module/controllers-module.iml" />
       <module fileurl="file://$PROJECT_DIR$/deposit-module/deposit-module.iml" filepath="$PROJECT_DIR$/deposit-module/deposit-module.iml" />
       <module fileurl="file://$PROJECT_DIR$/http-module/http-module.iml" filepath="$PROJECT_DIR$/http-module/http-module.iml" />
-      <module fileurl="file://$PROJECT_DIR$/stocks-module/stocks-module.iml" filepath="$PROJECT_DIR$/stocks-module/stocks-module.iml" />
+      <module fileurl="file://$PROJECT_DIR$/stocks-module/stocks-list-module.iml" filepath="$PROJECT_DIR$/stocks-module/stocks-list-module.iml" />
       <module fileurl="file://$PROJECT_DIR$/time-series-module/time-series-module.iml" filepath="$PROJECT_DIR$/time-series-module/time-series-module.iml" />
       <module fileurl="file://$PROJECT_DIR$/trading.iml" filepath="$PROJECT_DIR$/trading.iml" />
       <module fileurl="file://$PROJECT_DIR$/user-module/user-module.iml" filepath="$PROJECT_DIR$/user-module/user-module.iml" />

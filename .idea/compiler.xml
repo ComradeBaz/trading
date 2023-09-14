@@ -11,20 +11,19 @@
         <module name="utilities-module" />
         <module name="withdrawal-module" />
         <module name="user-module" />
+        <module name="stocks-list-module" />
         <module name="app-module" />
         <module name="http-module" />
-        <module name="controllers" />
+        <module name="controllers-module" />
         <module name="deposit-module" />
-        <module name="stocks-module" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="app-module" target="8" />
-      <module name="controllers" target="8" />
       <module name="controllers-module" target="8" />
       <module name="deposit-module" target="8" />
       <module name="http-module" target="8" />
-      <module name="stocks-module" target="8" />
+      <module name="stocks-list-module" target="8" />
       <module name="time-series-module" target="8" />
       <module name="trading" target="17" />
       <module name="user-module" target="8" />
@@ -35,11 +34,10 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="app-module" options="-parameters" />
-      <module name="controllers" options="-parameters" />
       <module name="controllers-module" options="-parameters" />
       <module name="deposit-module" options="-parameters" />
       <module name="http-module" options="-parameters" />
-      <module name="stocks-module" options="-parameters" />
+      <module name="stocks-list-module" options="-parameters" />
       <module name="time-series-module" options="-parameters" />
       <module name="trading" options="-parameters" />
       <module name="user-module" options="-parameters" />

@@ -25,4 +25,9 @@ public class DepositController {
     public ResponseEntity<Deposit> addUser(@RequestBody Deposit deposit) {
         return new ResponseEntity(depositService.saveDeposit(deposit), HttpStatus.CREATED);
     }
+
+    @GetMapping(value = "getDepositsByUserId")
+    public ResponseEntity<Deposit> getWithdrawalsByUserId(@RequestParam(name = "userId") Long userId) {
+        return new ResponseEntity(depositService.getDepositsByUserId(userId), HttpStatus.OK);
+    }
 }
