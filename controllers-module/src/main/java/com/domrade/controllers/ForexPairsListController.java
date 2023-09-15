@@ -1,7 +1,9 @@
 package com.domrade.controllers;
 
 import com.domrade.forexpairs.models.ForexPairItem;
+import com.domrade.forexpairs.models.ForexPairRateItem;
 import com.domrade.forexpairs.service.api.IForexPairsListService;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -40,5 +42,11 @@ public class ForexPairsListController {
     public ResponseEntity<List<ForexPairItem>> listForexPairsBySymbol(@RequestParam("symbol") String symbol) {
         List<ForexPairItem> returnList = forexPairsService.listForexPairsBySymbol(symbol);
         return new ResponseEntity<>(returnList, HttpStatus.OK);
+    }
+
+    @GetMapping (value = "/listForexPairsRateBySymbol")
+    public ResponseEntity<ForexPairRateItem> listForexPairsRateBySymbol(@RequestParam("symbol") String symbol) throws JsonProcessingException {
+        ForexPairRateItem item = forexPairsService.listExchangeRateByPair(symbol);
+        return new ResponseEntity<>(item, HttpStatus.OK);
     }
 }
