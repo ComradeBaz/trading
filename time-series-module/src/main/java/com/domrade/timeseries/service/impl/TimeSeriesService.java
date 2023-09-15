@@ -16,11 +16,13 @@ import java.util.List;
 @Service
 public class TimeSeriesService implements ITimeSeriesService {
 
+    private final String API = "time_series";
+
     private IHttpService httpService;
     private IJsonConverterService jsonConverterService;
 
-    @Value("${base.url.timeseries}")
-    private String baseUrlTimeseries;
+    @Value("${base.url}")
+    private String baseUrl;
 
     @Autowired
     public TimeSeriesService(IHttpService httpService, IJsonConverterService jsonConverterService) {
@@ -30,7 +32,8 @@ public class TimeSeriesService implements ITimeSeriesService {
 
     @Override
     public TimeSeriesResponse getTimeSeriesResponseBySymbol(String symbol, String interval, String outputsize) {
-        String url = baseUrlTimeseries
+        String url = baseUrl
+                + API
                 + "?symbol="
                 + symbol
                 + "&interval="

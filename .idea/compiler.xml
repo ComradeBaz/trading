@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="time-series-module" />
+        <module name="forexpairs-list-module" />
         <module name="utilities-module" />
         <module name="withdrawal-module" />
         <module name="user-module" />
@@ -24,6 +25,7 @@
       <module name="balance-module" target="8" />
       <module name="controllers-module" target="8" />
       <module name="deposit-module" target="8" />
+      <module name="forexpairs-list-module" target="8" />
       <module name="http-module" target="8" />
       <module name="stocks-list-module" target="8" />
       <module name="time-series-module" target="8" />
@@ -39,6 +41,7 @@
       <module name="balance-module" options="-parameters" />
       <module name="controllers-module" options="-parameters" />
       <module name="deposit-module" options="-parameters" />
+      <module name="forexpairs-list-module" options="-parameters" />
       <module name="http-module" options="-parameters" />
       <module name="stocks-list-module" options="-parameters" />
       <module name="time-series-module" options="-parameters" />

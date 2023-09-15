@@ -14,7 +14,8 @@
         <module>deposit-module</module>
 		<module>withdrawal-module</module>
 		<module>balance-module</module>
-	</modules>
+        <module>forexpairs-list-module</module>
+    </modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>

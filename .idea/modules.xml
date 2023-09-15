@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/balance-module/balance-module.iml" filepath="$PROJECT_DIR$/balance-module/balance-module.iml" />
       <module fileurl="file://$PROJECT_DIR$/controllers-module/controllers-module.iml" filepath="$PROJECT_DIR$/controllers-module/controllers-module.iml" />
       <module fileurl="file://$PROJECT_DIR$/deposit-module/deposit-module.iml" filepath="$PROJECT_DIR$/deposit-module/deposit-module.iml" />
+      <module fileurl="file://$PROJECT_DIR$/forexpairs-list-module/forexpairs-list-module.iml" filepath="$PROJECT_DIR$/forexpairs-list-module/forexpairs-list-module.iml" />
       <module fileurl="file://$PROJECT_DIR$/http-module/http-module.iml" filepath="$PROJECT_DIR$/http-module/http-module.iml" />
       <module fileurl="file://$PROJECT_DIR$/stocks-list-module/stocks-list-module.iml" filepath="$PROJECT_DIR$/stocks-list-module/stocks-list-module.iml" />
       <module fileurl="file://$PROJECT_DIR$/time-series-module/time-series-module.iml" filepath="$PROJECT_DIR$/time-series-module/time-series-module.iml" />

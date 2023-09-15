@@ -27,6 +27,7 @@
     <orderEntry type="module" module-name="deposit-module" />
     <orderEntry type="module" module-name="withdrawal-module" />
     <orderEntry type="module" module-name="balance-module" />
+    <orderEntry type="module" module-name="forexpairs-list-module" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter:2.7.9" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot:2.7.9" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-context:5.3.25" level="project" />

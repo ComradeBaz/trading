@@ -4,11 +4,13 @@ import com.domrade.balance.models.Balance;
 import com.domrade.balance.repository.IBalanceRepository;
 import com.domrade.balance.service.api.IBalanceService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import javax.persistence.EntityNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 
+@Service
 public class BalanceService implements IBalanceService {
 
     private IBalanceRepository balanceRepository;

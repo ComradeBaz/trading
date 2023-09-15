@@ -23,8 +23,8 @@ public class ListStockService implements IListStockService {
 
     private IJsonConverterService jsonConverterService;
 
-    @Value("${base.url.stocks}")
-    private String baseUrlStocks;
+    @Value("${base.url}")
+    private String baseUrl;
 
     @Autowired
     public ListStockService(IHttpService httpService, IJsonConverterService jsonConverterService) {
@@ -34,31 +34,31 @@ public class ListStockService implements IListStockService {
 
     @Override
     public List<StockItem> listStocks() {
-        String response = httpService.makeConnectionAndGetResponse(baseUrlStocks + API, HttpMethod.GET);
+        String response = httpService.makeConnectionAndGetResponse(baseUrl + API, HttpMethod.GET);
         return jsonConverterService.parseJson(response, StockItem.class, "data");
     }
 
     @Override
     public List<StockItem> listStocksBySymbol(String symbol) {
-        String response = httpService.makeConnectionAndGetResponse(baseUrlStocks + API + "?symbol=" + symbol, HttpMethod.GET);
+        String response = httpService.makeConnectionAndGetResponse(baseUrl + API + "?symbol=" + symbol, HttpMethod.GET);
         return jsonConverterService.parseJson(response, StockItem.class, "data");
     }
 
     @Override
     public List<StockItem> listStocksByExchange(String exchange) {
-        String response = httpService.makeConnectionAndGetResponse(baseUrlStocks + API + "?exchange=" + exchange, HttpMethod.GET);
+        String response = httpService.makeConnectionAndGetResponse(baseUrl + API + "?exchange=" + exchange, HttpMethod.GET);
         return jsonConverterService.parseJson(response, StockItem.class, "data");
     }
 
     @Override
     public List<StockItem> listStocksByCountry(String country) {
-        String response = httpService.makeConnectionAndGetResponse(baseUrlStocks + API + "?country=" + country, HttpMethod.GET);
+        String response = httpService.makeConnectionAndGetResponse(baseUrl + API + "?country=" + country, HttpMethod.GET);
         return jsonConverterService.parseJson(response, StockItem.class, "data");
     }
 
     @Override
     public List<StockItem> listStocksBySymbolExchangeCountry(String symbol, String exchange, String country) {
-        String response = httpService.makeConnectionAndGetResponse(baseUrlStocks + API + "?symbol=" + symbol + "&exchange=" + exchange + "&country=" + country, HttpMethod.GET);
+        String response = httpService.makeConnectionAndGetResponse(baseUrl + API + "?symbol=" + symbol + "&exchange=" + exchange + "&country=" + country, HttpMethod.GET);
         return jsonConverterService.parseJson(response, StockItem.class, "data");
     }
 }
