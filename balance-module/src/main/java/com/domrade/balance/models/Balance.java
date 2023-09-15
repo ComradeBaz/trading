@@ -1,4 +1,4 @@
-package com.domrade.deposit.models;
+package com.domrade.balance.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
@@ -14,9 +14,9 @@ import java.time.LocalDateTime;
 @Entity
 @Getter
 @Setter
-@Table(name = "deposits_table")
+@Table(name = "balance_table")
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Deposit {
+public class Balance {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
@@ -29,7 +29,9 @@ public class Deposit {
     @Column( name = "amount")
     private Float amount;
 
-    @Column( name = "createdDTM")
-    private LocalDateTime createdDTM;
+    @Column(name = "total")
+    private Float total;
 
+    @Column( name = "updatedDTM")
+    private LocalDateTime updatedDTM;
 }

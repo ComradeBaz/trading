@@ -25,9 +25,8 @@
         </dependency>
         <dependency>
             <groupId>com.domrade</groupId>
-            <artifactId>stocks-module</artifactId>
+            <artifactId>stocks-list-module</artifactId>
             <version>0.0.1-SNAPSHOT</version>
-            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>com.domrade</groupId>
@@ -50,6 +49,12 @@
         <dependency>
             <groupId>com.domrade</groupId>
             <artifactId>withdrawal-module</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.domrade</groupId>
+            <artifactId>balance-module</artifactId>
             <version>0.0.1-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
