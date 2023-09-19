@@ -1,6 +1,6 @@
-package com.domrade.user.entity.repository;
+package com.domrade.user.repository;
 
-import com.domrade.entity.User;
+import com.domrade.user.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

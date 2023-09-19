@@ -1,7 +1,7 @@
 package com.domrade.controllers;
 
-import com.domrade.entity.User;
-import com.domrade.user.entity.service.api.IUserService;
+import com.domrade.user.entity.User;
+import com.domrade.user.service.api.IUserService;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

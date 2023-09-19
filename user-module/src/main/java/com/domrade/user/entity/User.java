@@ -1,4 +1,4 @@
-package com.domrade.entity;
+package com.domrade.user.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;

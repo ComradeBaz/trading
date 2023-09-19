@@ -34,4 +34,11 @@ public class Balance {
 
     @Column( name = "updatedDTM")
     private LocalDateTime updatedDTM;
+
+    public Balance(Long userId, Float amount, Float total, LocalDateTime updatedDTM) {
+        this.userId = userId;
+        this.amount = amount;
+        this.total = total;
+        this.updatedDTM = updatedDTM;
+    }
 }

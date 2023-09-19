@@ -1,8 +1,8 @@
-package com.domrade.user.entity.service.impl;
+package com.domrade.user.service.impl;
 
-import com.domrade.entity.User;
-import com.domrade.user.entity.repository.IUserRepository;
-import com.domrade.user.entity.service.api.IUserService;
+import com.domrade.user.entity.User;
+import com.domrade.user.repository.IUserRepository;
+import com.domrade.user.service.api.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

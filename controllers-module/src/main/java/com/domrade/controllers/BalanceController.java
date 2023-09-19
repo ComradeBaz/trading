@@ -24,7 +24,7 @@ public class BalanceController {
     }
 
     @GetMapping(value = "getBalanceUpdatesByUserId")
-    public ResponseEntity<Deposit> getWithdrawalsByUserId(@RequestParam(name = "userId") Long userId) {
+    public ResponseEntity<Deposit> getBalanceUpdatesByUserId(@RequestParam(name = "userId") Long userId) {
         return new ResponseEntity(balanceService.getBalanceUpdatesByUserId(userId), HttpStatus.OK);
     }
 }
