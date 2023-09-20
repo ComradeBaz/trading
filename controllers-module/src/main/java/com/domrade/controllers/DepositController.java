@@ -6,9 +6,6 @@ import com.domrade.deposit.models.Deposit;
 import com.domrade.deposit.service.api.IDepositService;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -39,13 +36,12 @@ public class DepositController {
         // Since this is the first deposit the opening balance is 0
         // Create a default balanceObject with a total of 0
         try {
-            Pageable pageable = PageRequest.of(0,1, Sort.Direction.DESC,"updatedDTM");
             balanceObject = balanceService.getLatestBalanceByUserId(deposit.getUserId()).get(0);
         } catch (IndexOutOfBoundsException iobe) {
             balanceObject = new Balance(deposit.getUserId(), 0f, 0f, ldt);
         }
-        float balanceAmount = deposit.getAmount();
-        Balance newBalanceObject = new Balance(deposit.getUserId(), deposit.getAmount(), balanceAmount + balanceObject.getTotal(), ldt);
+        float depositAmount = deposit.getAmount();
+        Balance newBalanceObject = new Balance(deposit.getUserId(), deposit.getAmount(), depositAmount + balanceObject.getTotalBalance(), ldt);
         depositService.saveDeposit(deposit);
         Balance returnBalance = balanceService.saveNewBalance(newBalanceObject);
 

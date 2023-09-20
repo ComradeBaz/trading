@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -27,4 +28,7 @@ public class Withdrawal {
 
     @Column( name = "amount")
     private Float amount;
+
+    @Column( name = "createdDTM")
+    private LocalDateTime createdDTM;
 }

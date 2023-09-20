@@ -29,16 +29,16 @@ public class Balance {
     @Column( name = "amount")
     private Float amount;
 
-    @Column(name = "total")
-    private Float total;
+    @Column(name = "total_balance")
+    private Float totalBalance;
 
     @Column( name = "updatedDTM")
     private LocalDateTime updatedDTM;
 
-    public Balance(Long userId, Float amount, Float total, LocalDateTime updatedDTM) {
+    public Balance(Long userId, Float amount, Float totalBalance, LocalDateTime updatedDTM) {
         this.userId = userId;
         this.amount = amount;
-        this.total = total;
+        this.totalBalance = totalBalance;
         this.updatedDTM = updatedDTM;
     }
 }
