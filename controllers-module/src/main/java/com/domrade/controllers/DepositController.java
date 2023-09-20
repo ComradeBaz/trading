@@ -35,16 +35,16 @@ public class DepositController {
         LocalDateTime ldt = LocalDateTime.now();
         deposit.setCreatedDTM(ldt);
         Balance balanceObject;
+        // If this is the first deposit there is no existing record to get to determine the total balance
+        // Since this is the first deposit the opening balance is 0
+        // Create a default balanceObject with a total of 0
         try {
             Pageable pageable = PageRequest.of(0,1, Sort.Direction.DESC,"updatedDTM");
-            balanceObject = balanceService.getLatestBalance(deposit.getUserId(), pageable).get(0);
+            balanceObject = balanceService.getLatestBalanceByUserId(deposit.getUserId()).get(0);
         } catch (IndexOutOfBoundsException iobe) {
             balanceObject = new Balance(deposit.getUserId(), 0f, 0f, ldt);
         }
         float balanceAmount = deposit.getAmount();
-        //balanceObject.setAmount(deposit.getAmount());
-        //balanceObject.setTotal(balanceAmount + balanceObject.getTotal());
-        //balanceObject.setUpdatedDTM(ldt);
         Balance newBalanceObject = new Balance(deposit.getUserId(), deposit.getAmount(), balanceAmount + balanceObject.getTotal(), ldt);
         depositService.saveDeposit(deposit);
         Balance returnBalance = balanceService.saveNewBalance(newBalanceObject);

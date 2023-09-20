@@ -36,8 +36,8 @@ public class BalanceService implements IBalanceService {
     }
 
     @Override
-    public List<Balance> getLatestBalance(Long userId, Pageable pageable) {
-        return balanceRepository.getLatestBalanceByUserId(userId, pageable)
+    public List<Balance> getLatestBalanceByUserId(Long userId) {
+        return balanceRepository.getLatestBalanceByUserId(userId)
                 .orElseThrow(() -> new EntityNotFoundException());
     }
 }

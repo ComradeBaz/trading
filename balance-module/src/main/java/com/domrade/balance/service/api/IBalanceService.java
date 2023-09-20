@@ -12,5 +12,5 @@ public interface IBalanceService {
 
     public Balance saveNewBalance(Balance balance);
 
-    public List<Balance> getLatestBalance(Long userId, Pageable pageable);
+    public List<Balance> getLatestBalanceByUserId(Long userId);
 }

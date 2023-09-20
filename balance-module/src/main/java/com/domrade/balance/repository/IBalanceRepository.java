@@ -9,12 +9,14 @@ import java.util.List;
 import java.util.Optional;
 
 public interface IBalanceRepository extends JpaRepository<Balance, Long> {
-    @Query(value = "SELECT * FROM balance_table b WHERE b.user_id = :userId", nativeQuery = true)
+
+    @Query(value = "SELECT * FROM balance_table b WHERE b.user_id = :userId ORDER BY b.updatedDTM DESC", nativeQuery = true)
     public Optional<List<Balance>> getBalanceUpdatesByUserId(Long userId);
 
-    @Query(value = "SELECT * FROM balance_table b WHERE b.user_id = ?1 ORDER BY ?#{#pageable}",
+   // @Query(value = "SELECT * FROM balance_table b WHERE b.user_id = ?1 ORDER BY ?#{#pageable}",
+   @Query(value = "SELECT * FROM balance_table b WHERE b.user_id = :userId ORDER BY b.updatedDTM DESC",
             countQuery = "SELECT count(*) FROM balance_table",
             nativeQuery = true)
-    public Optional<List<Balance>> getLatestBalanceByUserId(Long userId, Pageable pageable);
+    public Optional<List<Balance>> getLatestBalanceByUserId(Long userId);
 
 }
